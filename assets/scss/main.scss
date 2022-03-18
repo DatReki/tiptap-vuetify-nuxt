@@ -1,0 +1,137 @@
+/* Variables */
+$nav-color: rgb(55, 144, 172);
+$bg-color: #292b31;
+$section-bg-color: #454851ff;
+$text-color: #f5f0f6ff;
+$special-color: rgb(115, 229, 233);
+
+$nav-font-weight: 600;
+$nav-font-size: 1.5rem;
+$nav-border: 0.20em solid $special-color;
+
+/* Breakpoints */
+$sm: 576px;     //Small
+$md: 768px;     //Medium
+$lg: 992px;     //Large
+$xl: 1200px;    //Extra large
+$xxl: 1400px;   //Extra extra large
+
+/* Default */
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav */
+.body-main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    nav,
+    footer {
+        background-color: $nav-color;
+        padding: 0.5em;
+
+        a,
+        h5,
+        p {
+            color: $text-color;
+        }
+
+        a {
+            &:hover,
+            &:focus {
+                color: $text-color;
+                text-decoration: none;
+                border-bottom: $nav-border;
+            }
+        }
+
+        .nav-item {
+            padding-right: 1em !important;
+        }
+
+        .d-flex {
+            @media (max-width: $lg) {
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                background-color: $nav-color;
+    
+                @media (max-width: $lg) {
+                    width: 100%;
+                }
+    
+                .dropdown-item {
+                    &:hover {
+                        background-color: initial;
+                    }
+                }
+            }
+        }
+    }
+    
+    nav {
+        a {
+            height: 2.5em;
+            font-weight: $nav-font-weight;
+            font-size: $nav-font-size;
+        }
+
+        .navbar-toggler {
+            span {
+                color: $text-color;
+            }
+        }
+    }
+
+    footer {
+        margin-top: auto;
+        min-height: 12em;
+
+        a {
+            height: 1.5em;
+        }
+
+        h5 {
+            font-weight: $nav-font-weight;
+            font-size: $nav-font-size;
+        }
+
+        .newsletter-errors {
+            padding: 0.5em;
+            background-color: $text-color;
+        }
+
+        #social-media-icons {
+            a {
+                &:hover {
+                    border-bottom: none;
+                    span {
+                        color: $special-color;
+                    }
+                }
+                span {
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+.content-body {
+    .main-content {
+        padding: 5em 0 5em 0;
+
+        .header-text {
+            text-align: center;
+            padding-bottom: 1em;
+        }
+        
+        .client-only-placeholder {
+            text-align: center;
+        }
+    }
+}
